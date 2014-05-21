@@ -1,0 +1,323 @@
+/*   
+Theme Name: MASS
+Theme URI: http://masscollective.com
+Description: This is a theme for the MASS collective, based on the style guide by Jack Bloom.  Includes a dash of http://html5boilerplate.com.
+Author: Josh Clayton, primary styles by Jack Bloom & Nick Tennies
+Author URI: http://rightcliquedesign.com, 
+Version: 2
+*/
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+body{font:13px/1 serif; color:#231f20; letter-spacing:.2px; line-height:16px; }
+select, input, textarea, button { font:99% sans-serif; }
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+/**
+ * Minimal base styles.
+ */
+
+/* Always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+ul, ol { margin-left: 0; }
+ol { list-style-type: decimal; }
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea { margin: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid   { color: #231f20; }
+input:invalid, textarea:invalid {
+}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection{ background: #ed1556; color:#fff; text-shadow: none; }
+::selection { background:#ed1556; color:#fff; text-shadow: none; }
+
+/* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #ed1556; }
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+body, select, input, textarea {
+	color: #231f20;
+	font-family: 'Arvo', courier, serif;
+}
+
+/* Paragraphs. Headers. */
+p{padding:0 0 5px 0;}
+h1{font-size:24px; color:#ed1556; font-weight:bold; line-height:20px; border-bottom:1.5pt dashed #ed1556; padding:0 0 9px 0; margin:0 0 17px 0;}
+h3{font-family:'Cabin', arial, sans-serif; text-transform:uppercase; font-size:72px; font-weight:bold; line-height:60px; display:inline; letter-spacing:-4px; width:auto; overflow:hidden; white-space:nowrap;}
+h3 red{padding-right:15px; height:55px; display:inline-block; border-right:1000px solid #ed1556;}
+h3 black{color:#231f20; padding-right:15px; height:55px; display:inline-block; border-right:1000px solid #231f20;}
+.wp-caption-text, h4{font-family:'Cabin', arial, sans-serif; color:#fff; text-transform:uppercase; font-size:36px; font-weight:bold; line-height:30px; display:block; letter-spacing:-3px; overflow:hidden; position:absolute; bottom:10px; left:10px;}
+h5{font-family:'Cabin', arial, sans-serif; color:#ed1556; text-transform:uppercase; font-size:36px; font-weight:bold; line-height:30px; display:block; letter-spacing:-3px;}
+hr{border-bottom:1.5pt dashed #ed1556; padding:0 0 9px 0; margin:0 0 10px 0;}
+
+/**
+* Primary styles
+*
+* Author: Jack Bloom, Nick Tennies
+*/
+#navigation a{color:#fff;}
+#navigation a:visited{color:#fff;}
+
+#footer a{color:#fff;}
+#footer a:visited{color:#fff;}
+
+#comments .magenta a{color:#231f20;}
+
+a{color:#ed1556; text-decoration:none;}
+a:active{color:#ed1556;}
+a:visited{color:#ed1556;}
+a:hover{font-weight:bold; -webkit-transition:color 1s ease-in; -moz-transition:color 1s ease-in;  -o-transition:color 1s ease-in; transition:color 1s ease-in;}
+
+.staff a{color:#fff;}
+.staff a:hover{color:#ed1556;}
+
+
+ul{list-style-type:none;}
+ul li{display:inline-block; padding:5px 5px 5px 0;}
+
+red{color:#ed1556;}
+black{color:#231f20;}
+
+.right{float:right;  margin:0  0 0 10px; }
+.left{float:left; margin:0 10px 0 0; }
+
+#submit{background:#ed1556; width:60px; height:30px; color:#fff; border:none; font-family:'Arvo', arial, serif; margin:0 0 10px 0; }
+#submit:active{color:#ed1556;}
+#submit:hover{background:#231f20;}
+
+.field{font-family:'Arvo', arial, serif; font-weight:bold; width:95%; color:#ed1556 !important; border-bottom:1.5pt dashed #ed1556; margin:0 0 10px 0;  padding:10px 0 10px 5px; margin-right:10px; border-top:none; border-left:none; border-right:none; background:#f9f1f1; outline:none;}
+	.field:focus{background:#ebd9d9; outline:none;}
+
+html, body {background:url("images/bk.jpg");}
+
+#wrapper{background: url("images/headerbk.png") repeat-x;}
+
+#navigation{width:940px; margin:0 auto;	 background:#231f20;}
+	.mainnav{width:940px; overflow:hidden; margin:0 auto; height:42px;}
+.navigation{float:right;}	
+.navigation li{display:inline-block; padding:14px 30px 0 0;} 
+ 
+#about .subnavigation{display:block;}
+.subnavigation{position:relative; width:940px; margin:0 auto; height:35px; background:#ed1556; display:none;}
+
+
+#header{padding:49px 0 0 0; height:120px;}
+
+.logo{background: url("images/logo.png")no-repeat; height:83px;}
+
+.box{border-bottom:1.5pt dashed #ed1556; padding:24px 0 19px 0; overflow:hidden;}
+
+#footer{width:100%; color:#fff;}
+	.twitterlist{width:410px; float:left; margin:-5px 0 0 0;}
+
+.black{width:100%; background:#231f20; height:47px;}
+	#faq .black{width:auto; height:36px; margin:0 10px 5px 0; display:inline-block; clear:both; color:#fff; font-weight:bold; position:relative;}
+	#faq .black p{padding:10px;}
+
+.magenta{background:#ed1556; height:47px; padding:10px 0 0 0;}
+	.comment{background:#fff; max-width:595px; width:auto; margin:0 10px 0 0; color:#fff;}
+		.comment-author a{color:#fff;}
+	.comment p{padding:10px; background:#ed1556;}
+	.comment-author-admin .comment-author{background:#231f20;}
+	.comment-author-admin p{background:#231f20;}
+	.comment-author{padding:10px; margin:0 0 10px 0; font-weight:bold; font-style:normal; background:#ed1556;}
+	.reply{float:right;  margin:0 0 10px 10px;}
+	
+.comment{width:auto; clear:both;}
+	
+	.comment-meta{display:none;}
+	
+.children{padding:0 0 0 50px; margin:10px 0 0 0; background: url("images/reply-icon.png") no-repeat 0 15px;}
+
+.staff{height:220px; position:relative; background:#666; overflow:hidden; margin-bottom:20px;}
+
+.wp-caption{height:220px; position:relative; overflow:hidden; margin-bottom:20px;}
+
+.team ul{list-style-type:none;}
+	.team li{display:block; padding:17px 0 37px 80px; margin:0 0 10px 0;}
+	.team .cat-item-5{background: url("images/art-icon.png") no-repeat;}
+	.team .cat-item-6{background: url("images/science-icon.png") no-repeat;}
+	.team .music{background: url("images/music-icon.png") no-repeat;}
+	.team .social{background: url("images/social-icon.png") no-repeat;}
+	.team .biology{background: url("images/biology-icon.png") no-repeat;}
+	.team .instrumental{background: url("images/instrumental-icon.png") no-repeat;}
+	.team .programming{background: url("images/programming-icon.png") no-repeat;}
+	.team .socialmedia{background: url("images/socialmedia-icon.png") no-repeat;}
+	.team .vocal{background: url("images/vocal-icon.png") no-repeat;}
+	.team .video{background: url("images/video-icon.png") no-repeat;}
+	.team .idea{background: url("images/idea-icon.png") no-repeat;}
+	.team .skill{background: url("images/skill-icon.png") no-repeat;}
+	.team .problem{background: url("images/problem-icon.png") no-repeat;}
+	.team .solution{background: url("images/solution-icon.png") no-repeat;}
+	.team .collaborating{background: url("images/collaboration-icon.png") no-repeat;}
+	.team .working{background: url("images/working-icon.png") no-repeat;}
+	.team .completed{background: url("images/completed-icon.png") no-repeat;}
+	.team .planning{background: url("images/planning-icon.png") no-repeat;}
+	.team .hold{background: url("images/onhold-icon.png") no-repeat;}
+	.team .fund{background: url("images/funding-icon.png") no-repeat;}
+	.twitter{background: url("images/twitter-icon.png") no-repeat;}
+	
+
+	
+.blog{-moz-column-count: 2; -moz-column-gap: 20px; -webkit-column-count: 2; -webkit-column-gap:20px; column-count: 2; column-gap: 20px;}
+#page .blog{-moz-column-count: 3; -moz-column-gap: 20px; -webkit-column-count: 3; -webkit-column-gap:20px; column-count: 3; column-gap: 20px;}
+
+.ratings{list-style-type:none;}
+	.rating{display:inline-block; background:#231f20; padding:10px 5px 10px 5px; margin:0 10px 0 0; font-weight:bold; color:#fff; font-size:21px;}
+	.staff .rating{background:#ed1556; margin:20px 30px;}
+	.rating:hover{background:#ed1556; cursor:pointer;}
+	
+img.alignright {float:right; margin:0 0 10px 10px;}
+img.alignleft {float:left; margin:0 10px 10px 0;}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+.alignright {float:right; }
+.alignleft {float:left; }
+.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+
+/* STICKY FOOTER */
+
+html, body {height: 100%;}
+
+#wrapper {min-height: 100%;}
+
+#main {overflow:hidden;
+	padding-bottom: 120px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -104px; /* negative value of footer height */
+	height: 104px;
+	clear:both;} 
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+/**
+ * Media queries for responsive design.
+ *
+ * These follow after primary styles so they will successfully override.
+ */
+
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+
+}
+
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+
+
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
+/**
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
