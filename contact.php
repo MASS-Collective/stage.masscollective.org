@@ -295,7 +295,7 @@
     event.preventDefault();
   });
 </script>
-<!-- <script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=1.1'></script> -->
+<!-- <!-- script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=1.1'></script --> -->
 <!-- <script type='text/javascript' src='http://masscollective.org/wp-includes/js/comment-reply.js?ver=3.4.1'></script> -->
 <!-- <script type='text/javascript' src='wp-content/plugins/google-calendar-events/js/jquery-qtip.js'></script> -->
 <script type='text/javascript'>
